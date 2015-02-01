@@ -61,5 +61,5 @@ git clone git@github.com:fellipecastro/ubuntu-updater.git
 cp ubuntu-updater/updater.sh ~
 
 source ~/.bashrc
-print 123
+
 cd -
