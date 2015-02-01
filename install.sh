@@ -5,10 +5,10 @@ sudo locale-gen UTF-8
 
 for i in {1..2}
 do
-    sudo apt-get update -y
-    sudo apt-get upgrade -y
-    sudo apt-get autoremove -y
-    sudo apt-get clean -y
+    sudo apt-get update -y
+    sudo apt-get upgrade -y
+    sudo apt-get autoremove -y
+    sudo apt-get clean -y
 done
 
 sudo apt-get install python-setuptools python3-setuptools -y
@@ -19,8 +19,8 @@ sudo apt-get install python3-pip -y
 
 for i in {1..2}
 do
-    sudo pip install --upgrade setuptools pip
-    sudo pip3 install --upgrade setuptools pip
+    sudo pip install --upgrade setuptools pip
+    sudo pip3 install --upgrade setuptools pip
 done
 
 sudo apt-get install python-dev tree git exuberant-ctags supervisor nginx postgresql \
