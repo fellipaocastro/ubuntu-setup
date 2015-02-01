@@ -61,7 +61,7 @@ echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 echo -e 'alias python2="python"' > ~/.bash_aliases
 
-sed -i '' '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
+sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
 git clone git@github.com:fellipecastro/ubuntu-updater.git
 cp ubuntu-updater/updater.sh ~
