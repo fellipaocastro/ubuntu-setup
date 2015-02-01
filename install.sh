@@ -53,7 +53,7 @@ echo -e '\nexport PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"' >> ~/.bashrc
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
-echo -e 'alias python2="python"' > ~/.bash_aliases
+echo -e 'alias python2="python"' >> ~/.bash_aliases
 
 sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
