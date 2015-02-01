@@ -24,24 +24,16 @@ sudo pip install virtualenv virtualenvwrapper ipython flake8 ipdb httpie argpars
 
 sudo pip3 install ipython flake8 ipdb httpie argparse
 
-git config --global user.name "Fellipe Castro"
-git config --global user.email contact@fellipecastro.com
 git config --global push.default simple
 git config --global core.editor vim
 
-if [ ! -f ~/.ssh/id_rsa.pub ]; then
-    ssh-keygen -t rsa -C "contact@fellipecastro.com"
-    cat .ssh/id_rsa.pub
-    read -p 'Press [Enter] key to continue…'
-fi
-
-git clone git@github.com:rafael84/vim-ide.git
+git clone https://github.com/rafael84/vim-ide.git
 bash ~/vim-ide/install.sh
 touch ~/.vimrc_extra
 
-git clone git@github.com:powerline/fonts.git
+git clone https://github.com/powerline/fonts.git
 ./fonts/install.sh
-git clone git@github.com:milkbikis/powerline-shell.git
+git clone https://github.com/milkbikis/powerline-shell.git
 cp powerline-shell/config.py{.dist,}
 cd powerline-shell/ && ./install.py && cd ..
 ln -s ~/powerline-shell/powerline-shell.py ~/powerline-shell.py
@@ -57,9 +49,7 @@ echo -e 'alias python2="python"' >> ~/.bash_aliases
 
 sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
-git clone git@github.com:fellipecastro/ubuntu-updater.git
+git clone https://github.com/fellipecastro/ubuntu-updater.git
 cp ubuntu-updater/updater.sh ~
-
-source .bashrc
 
 cd -
