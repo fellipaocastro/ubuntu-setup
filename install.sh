@@ -60,6 +60,6 @@ sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 git clone git@github.com:fellipecastro/ubuntu-updater.git
 cp ubuntu-updater/updater.sh ~
 
-source ~/.bashrc
+source .bashrc
 
 cd -
