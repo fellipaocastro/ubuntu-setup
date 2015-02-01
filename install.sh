@@ -41,7 +41,8 @@ if [ ! -f ~/.ssh/id_rsa.pub ]; then
     read -p 'Press [Enter] key to continue…'
 fi
 
-wget -O - https://raw.githubusercontent.com/rafael84/vim-ide/master/install.sh | bash
+git clone git@github.com:rafael84/vim-ide.git
+bash ~/vim-ide/install.sh
 touch ~/.vimrc_extra
 
 git clone git@github.com:powerline/fonts.git
