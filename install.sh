@@ -1,7 +1,6 @@
 #!/bin/bash
 cd ~
 
-
 sudo locale-gen UTF-8
 
 for i in {1..2}
