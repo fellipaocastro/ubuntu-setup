@@ -50,4 +50,4 @@ sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 git clone https://github.com/fellipecastro/ubuntu-updater.git
 cp ubuntu-updater/updater.sh ~
 
-source /home/`whoami`/.bashrc
+source /root/.bashrc
