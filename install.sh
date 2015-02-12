@@ -6,7 +6,7 @@ sudo locale-gen UTF-8
 sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt-get autoremove -y
-sudo apt-get clean -yi
+sudo apt-get clean -y
 
 sudo apt-get install python-dev python-setuptools python3-setuptools ipython ipython3 \
 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib -y
