@@ -20,6 +20,8 @@ sudo pip3 install --upgrade setuptools pip
 
 sudo pip install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 
+echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
+
 sudo pip3 install flake8 ipdb httpie argparse
 
 git config --global push.default simple
@@ -35,16 +37,9 @@ git clone https://github.com/milkbikis/powerline-shell.git
 cp powerline-shell/config.py{.dist,}
 cd powerline-shell/ && ./install.py && cd ..
 ln -s ~/powerline-shell/powerline-shell.py ~/powerline-shell.py
-
-
 echo -e '\nfunction _update_ps1() {\n    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"\n}' >> ~/.bashrc
-
 echo -e '\nexport PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"' >> ~/.bashrc
-
-echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
-
 echo -e 'alias python2="python"' >> ~/.bash_aliases
-
 sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git
