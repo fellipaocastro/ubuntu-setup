@@ -9,8 +9,7 @@ sudo apt-get autoremove -y
 sudo apt-get clean -y
 
 sudo apt-get install python-dev python-setuptools python3-setuptools ipython ipython3 \
-tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
-build-essential -y
+tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang build-essential -y
 
 sudo easy_install -U pip
 
