@@ -3,12 +3,16 @@ cd ~
 
 sudo locale-gen UTF-8
 
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
+echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee \
+    /etc/apt/sources.list.d/mongodb.list
+
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
 sudo apt-get install build-essential python-dev python-setuptools python3-setuptools ipython \
-ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
-redis-server mongodb-org tig -y
+    ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
+    redis-server mongodb-org tig -y
 
 git config --global push.default simple
 git config --global core.editor vim
