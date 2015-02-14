@@ -44,3 +44,5 @@ cp ~/ubuntu-updater/updater.sh ~
 
 sudo apt-get autoremove -y
 sudo apt-get clean -y
+
+sudo reboot
