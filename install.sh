@@ -1,6 +1,8 @@
 #!/bin/bash
 cd ~
 
+echo 'America/Sao_Paulo' > /etc/timezone
+
 sudo locale-gen UTF-8
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
@@ -12,7 +14,7 @@ sudo apt-get upgrade -y
 
 sudo apt-get install build-essential python-dev python-setuptools python3-setuptools ipython \
     ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
-    redis-server mongodb-org tig python-pip python3-pip -y
+    redis-server mongodb-org tig python-pip python3-pip ntp -y
 
 git config --global push.default simple
 git config --global core.editor vim
