@@ -18,18 +18,18 @@ echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | 
 sudo apt-get update -y
 sudo apt-get upgrade -y
 
-sudo apt-get install build-essential python-dev python-setuptools python3-setuptools ipython \
-    ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
-    redis-server mongodb-org tig python-pip python3-pip ntp -y
+sudo apt-get install build-essential python-dev python3-dev python-setuptools python3-setuptools \
+    ipython ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib \
+    golang redis-server mongodb-org tig python-pip python3-pip ntp -y
 
 git config --global push.default simple
 git config --global core.editor vim
 
-sudo pip2 install -U setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
-sudo pip3 install -U setuptools flake8 ipdb httpie argparse
+sudo pip3 install flake8 ipdb httpie argparse
 
 git clone https://github.com/rafael84/vim-ide.git
 source ~/vim-ide/install.sh
