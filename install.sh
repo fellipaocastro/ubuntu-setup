@@ -8,7 +8,7 @@ sudo apt-get upgrade -y
 
 sudo apt-get install build-essential python-dev python-setuptools python3-setuptools ipython \
 ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
-redis-server mongodb-org -y
+redis-server mongodb-org tig -y
 
 git config --global push.default simple
 git config --global core.editor vim
@@ -17,21 +17,18 @@ sudo easy_install -U pip
 
 sudo apt-get install python3-pip -y
 
-sudo pip install --upgrade setuptools pip
-sudo pip3 install --upgrade setuptools pip
-
-sudo pip install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+sudo pip install -U pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
-sudo pip3 install flake8 ipdb httpie argparse
+sudo pip3 install -U pip setuptools flake8 ipdb httpie argparse
 
 git clone https://github.com/rafael84/vim-ide.git
 source ~/vim-ide/install.sh
 touch ~/.vimrc_extra
 
 git clone https://github.com/powerline/fonts.git
-~/fonts/install.sh
+source ~/fonts/install.sh
 git clone https://github.com/milkbikis/powerline-shell.git
 cp ~/powerline-shell/config.py{.dist,}
 cd ~/powerline-shell/ && ./install.py && cd ~
