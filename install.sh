@@ -28,7 +28,7 @@ git config --global push.default simple
 git config --global core.editor vim
 
 git clone https://github.com/rafael84/vim-ide.git
-bash ~/vim-ide/install.sh
+source ~/vim-ide/install.sh
 touch ~/.vimrc_extra
 
 git clone https://github.com/powerline/fonts.git
@@ -44,3 +44,5 @@ sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git
 cp ubuntu-updater/updater.sh ~
+
+touch ~/.bashrc
