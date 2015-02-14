@@ -3,6 +3,12 @@ cd ~
 
 echo 'America/Sao_Paulo' > /etc/timezone
 
+sudo fallocate -l 1G /swapfile
+sudo chmod 600 /swapfile
+sudo mkswap /swapfile
+sudo swapon /swapfile
+sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
+
 sudo locale-gen UTF-8
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
