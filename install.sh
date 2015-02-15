@@ -1,4 +1,6 @@
 #!/bin/bash
+cd ~
+
 echo 'America/Sao_Paulo' > /etc/timezone
 
 sudo fallocate -l 1G /swapfile
@@ -37,7 +39,7 @@ git clone https://github.com/powerline/fonts.git
 source ~/fonts/install.sh
 git clone https://github.com/milkbikis/powerline-shell.git
 cp ~/powerline-shell/config.py{.dist,}
-cd ~/powerline-shell/ && ./install.py && cd -
+cd ~/powerline-shell/ && ./install.py && cd ~
 ln -s ~/powerline-shell/powerline-shell.py ~/powerline-shell.py
 echo -e '\nfunction _update_ps1() {\n    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"\n}' \
     >> ~/.bashrc
