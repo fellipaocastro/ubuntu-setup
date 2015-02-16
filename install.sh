@@ -53,6 +53,6 @@ echo -e 'alias python2="python"' >> ~/.bash_aliases
 sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
-cp ~/ubuntu-updater/updater.sh ~
+ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 
 sudo reboot
