@@ -1,6 +1,4 @@
 #!/bin/bash
-cd ~
-
 echo 'America/Sao_Paulo' > /etc/timezone
 
 sudo fallocate -l 1G /swapfile
@@ -31,15 +29,15 @@ echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
 sudo pip3 install flake8 ipdb httpie argparse
 
-git clone https://github.com/rafael84/vim-ide.git
+git clone https://github.com/rafael84/vim-ide.git ~/vim-ide
 source ~/vim-ide/install.sh
 touch ~/.vimrc_extra
 
-git clone https://github.com/powerline/fonts.git
+git clone https://github.com/powerline/fonts.git ~/fonts
 source ~/fonts/install.sh
-git clone https://github.com/milkbikis/powerline-shell.git
+git clone https://github.com/milkbikis/powerline-shell.git ~/powerline-shell
 cp ~/powerline-shell/config.py{.dist,}
-cd ~/powerline-shell/ && ./install.py && cd ~
+cd ~/powerline-shell/ && ./install.py && cd -
 ln -s ~/powerline-shell/powerline-shell.py ~/powerline-shell.py
 echo -e '\nfunction _update_ps1() {\n    export PS1="$(~/powerline-shell.py $? 2> /dev/null)"\n}' \
     >> ~/.bashrc
@@ -47,7 +45,7 @@ echo -e '\nexport PROMPT_COMMAND="_update_ps1; $PROMPT_COMMAND"' >> ~/.bashrc
 echo -e 'alias python2="python"' >> ~/.bash_aliases
 sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
-git clone https://github.com/fellipecastro/ubuntu-updater.git
+git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 cp ~/ubuntu-updater/updater.sh ~
 
 sudo apt-get autoremove -y
