@@ -11,12 +11,12 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
-echo 'America/Sao_Paulo' > /etc/timezone
+sudo echo 'America/Sao_Paulo' > /etc/timezone
 
-ssh-keygen -f /root/.ssh/id_rsa -N ''
+ssh-keygen -f ~/.ssh/id_rsa -N ''
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee \
+sudo echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee \
     /etc/apt/sources.list.d/mongodb.list
 
 sudo apt-get install aptitude -y
