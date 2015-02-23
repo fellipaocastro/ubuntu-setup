@@ -19,13 +19,17 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 sudo echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee \
     /etc/apt/sources.list.d/mongodb.list
 
+sudo apt-get install apt-transport-https
+curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
+echo "deb https://repo.varnish-cache.org/ubuntu/ precise varnish-4.0" >> /etc/apt/sources.list.d/varnish-cache.list
+
 sudo apt-get install aptitude -y
 sudo aptitude update -y
 sudo aptitude safe-upgrade -y
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
     ipython ipython3 tree git exuberant-ctags supervisor nginx postgresql postgresql-contrib \
-    golang redis-server mongodb-org tig python-pip python3-pip ntp -y
+    golang redis-server mongodb-org tig python-pip python3-pip ntp varnish -y
 
 sudo aptitude clean -y
 
