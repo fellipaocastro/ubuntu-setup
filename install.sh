@@ -36,8 +36,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
 
 sudo aptitude clean -y
 
-git config --global push.default simple
-git config --global core.editor vim
+wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
 
 sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 sudo pip3 install flake8 ipdb httpie argparse
