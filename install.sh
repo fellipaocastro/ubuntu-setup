@@ -18,6 +18,8 @@ ssh-keygen -f ~/.ssh/id_rsa -N ''
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 sudo echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee \
     /etc/apt/sources.list.d/mongodb.list
+    
+sudo apt-get install curl
 
 sudo apt-get install apt-transport-https
 curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
@@ -60,5 +62,8 @@ sed -i '1s/.*/#!\/usr\/bin\/env python2/' ~/powerline-shell/powerline-shell.py
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | bash -s stable
 
 sudo reboot
