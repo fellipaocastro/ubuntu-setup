@@ -19,7 +19,7 @@ sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 sudo echo 'deb http://downloads-distro.mongodb.org/repo/ubuntu-upstart dist 10gen' | sudo tee \
     /etc/apt/sources.list.d/mongodb.list
     
-sudo apt-get install curl
+sudo apt-get install curl vim
 
 sudo apt-get install apt-transport-https
 curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
