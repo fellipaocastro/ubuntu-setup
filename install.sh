@@ -44,7 +44,7 @@ sudo pip3 install flake8 ipdb httpie argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
-git clone https://github.com/rafael84/vim-ide.git ~/vim-ide
+git clone https://github.com/fellipecastro/vim-ide.git ~/vim-ide
 source ~/vim-ide/install.sh
 touch ~/.vimrc_extra
 
