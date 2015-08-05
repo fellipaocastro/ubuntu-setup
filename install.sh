@@ -44,8 +44,7 @@ sudo pip3 install flake8 ipdb httpie argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.bashrc
 
-git clone https://github.com/fellipecastro/vim-ide.git ~/vim-ide
-source ~/vim-ide/install.sh
+wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | bash
 touch ~/.vimrc_extra
 
 git clone https://github.com/powerline/fonts.git ~/fonts
