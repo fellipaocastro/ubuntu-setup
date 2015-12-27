@@ -34,6 +34,9 @@ sudo echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multive
 curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
 echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> /etc/apt/sources.list.d/varnish-cache.list
 
+sudo add-apt-repository ppa:webupd8team/java
+echo oracle-java9-installer shared/accepted-oracle-license-v1-1 select true | sudo /usr/bin/debconf-set-selections
+
 sudo apt-get install aptitude -y
 sudo aptitude update -y
 sudo aptitude safe-upgrade -y
@@ -42,7 +45,8 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
     ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib \
     golang golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip p7zip-full \
     p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server mysql-client mysql-server \
-    libmysqlclient-dev -y
+    libmysqlclient-dev oracle-java9-installer oracle-java9-set-default filezilla pgadmin3 mysql-workbench \
+    mysql-workbench-data -y
 
 sudo aptitude clean -y
 
