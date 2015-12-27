@@ -15,7 +15,7 @@ ssh-keygen -f ~/.ssh/id_rsa -N ''
 
 sudo apt-get update
     
-sudo apt-get install zsh git curl apt-transport-https -y
+sudo apt-get install build-essential zsh git curl apt-transport-https -y
 
 wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
 
@@ -48,7 +48,7 @@ echo 'mysql-server mysql-server/root_password password root' | \
 echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
 
-sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
+sudo aptitude install python-dev python3-dev python-setuptools python3-setuptools \
     ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib \
     golang golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
     p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server mysql-client \
