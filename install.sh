@@ -13,9 +13,7 @@ sudo echo 'America/Sao_Paulo' > /etc/timezone
 
 ssh-keygen -f ~/.ssh/id_rsa -N ''
 
-sudo apt-get update
-    
-sudo apt-get install build-essential zsh git curl apt-transport-https -y
+sudo apt-get install zsh git curl apt-transport-https -y
 
 wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
 
@@ -37,9 +35,13 @@ echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> \
 
 sudo add-apt-repository ppa:webupd8team/java -y
 
-sudo apt-get install aptitude -y
 sudo aptitude update -y
-sudo aptitude safe-upgrade -y
+
+sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
+    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib \
+    golang golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
+    p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
+    pgadmin3  -y
 
 echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
     sudo /usr/bin/debconf-set-selections
@@ -48,12 +50,8 @@ echo 'mysql-server mysql-server/root_password password root' | \
 echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
 
-sudo aptitude install python-dev python3-dev python-setuptools python3-setuptools \
-    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib \
-    golang golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
-    p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server mysql-client \
-    mysql-server libmysqlclient-dev oracle-java9-installer oracle-java9-set-default filezilla \
-    pgadmin3 mysql-workbench mysql-workbench-data -y
+sudo aptitude install oracle-java9-installe roracle-java9-set-default mysql-server \
+    libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
