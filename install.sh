@@ -50,7 +50,7 @@ echo 'mysql-server mysql-server/root_password password root' | \
 echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
 
-sudo aptitude install oracle-java9-installe roracle-java9-set-default mysql-server \
+sudo aptitude install oracle-java9-installer oracle-java9-set-default mysql-server \
     libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
