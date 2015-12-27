@@ -39,9 +39,9 @@ sudo add-apt-repository ppa:webupd8team/java -y
 
 echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
     sudo /usr/bin/debconf-set-selections
-echo 'mysql-server-5.6 mysql-server/root_password password ' | \
+echo "mysql-server-5.6 mysql-server/root_password password ''" | \
     sudo /usr/bin/debconf-set-selections
-echo 'mysql-server-5.6 mysql-server/root_password_again password ' | \
+echo "mysql-server-5.6 mysql-server/root_password_again password ''" | \
     sudo /usr/bin/debconf-set-selections
 
 sudo apt-get install aptitude -y
