@@ -19,7 +19,9 @@ sudo apt-get install zsh git curl apt-transport-https -y
 
 wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
 
-sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+wget -NP /tmp https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh
+sed -i.bak '/env zsh/d' /tmp/install.sh
+source /tmp/install.sh
 
 git clone https://github.com/zenorocha/dracula-theme/ ~/dracula-theme
 ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
