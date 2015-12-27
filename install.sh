@@ -38,8 +38,8 @@ sudo add-apt-repository ppa:webupd8team/java -y
 sudo aptitude update -y
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
-    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib \
-    golang golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
+    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
+    golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
     p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
     pgadmin3  -y
 
