@@ -37,16 +37,16 @@ echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> \
 
 sudo add-apt-repository ppa:webupd8team/java -y
 
+sudo apt-get install aptitude -y
+sudo aptitude update -y
+sudo aptitude safe-upgrade -y
+
 echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
     sudo /usr/bin/debconf-set-selections
 echo 'mysql-server mysql-server/root_password password root' | \
     sudo /usr/bin/debconf-set-selections
 echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
-
-sudo apt-get install aptitude -y
-sudo aptitude update -y
-sudo aptitude safe-upgrade -y
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
     ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib \
