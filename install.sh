@@ -17,7 +17,13 @@ sudo apt-get update
     
 sudo apt-get install zsh git curl apt-transport-https -y
 
+wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
+
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+git clone https://github.com/zenorocha/dracula-theme/ ~/dracula-theme
+ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
+sed -i.bak 's~\(ZSH_THEME="\)[^"]*\(".*\)~\1dracula\2~' ~/.zshrc
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 sudo echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | sudo tee \
@@ -38,12 +44,16 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
 
 sudo aptitude clean -y
 
-wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+\curl -sSL https://get.rvm.io | zsh -s stable --ruby
+rvm --default use current
 
 sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 sudo pip3 install flake8 ipdb httpie argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
+
+echo -e "alias ll='ls -lGa'" >> ~/.zshrc
 
 wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | zsh
 touch ~/.vimrc_extra
@@ -53,9 +63,6 @@ source ~/fonts/install.sh
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
-
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | zsh -s stable --ruby
-rvm --default use current
+source ~/updater.sh
 
 sudo reboot
