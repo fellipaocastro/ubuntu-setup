@@ -41,7 +41,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
     ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
     golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
     p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
-    pgadmin3  -y
+    pgadmin3 htop -y
 
 echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
     sudo /usr/bin/debconf-set-selections
