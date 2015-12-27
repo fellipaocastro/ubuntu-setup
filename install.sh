@@ -1,7 +1,7 @@
 #!/bin/bash
 sudo ufw allow ssh
 sudo ufw allow www
-sudo ufw enable
+sudo yes 'yes' | ufw enable
 
 sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
