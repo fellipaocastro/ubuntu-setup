@@ -65,14 +65,14 @@ sudo pip3 install flake8 ipdb httpie argparse
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
 
-wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | bash
-touch ~/.vimrc_extra
-
 git clone https://github.com/powerline/fonts.git ~/fonts
 source ~/fonts/install.sh
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 source ~/updater.sh
+
+wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | bash
+touch ~/.vimrc_extra
 
 sudo reboot
