@@ -51,7 +51,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
 sudo aptitude clean -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-\curl -sSL https://get.rvm.io | zsh -s stable --ruby
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 rvm --default use current
 
 sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
@@ -61,7 +61,7 @@ echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 
 echo -e "alias ll='ls -lGa'" >> ~/.zshrc
 
-wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | zsh
+wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | bash
 touch ~/.vimrc_extra
 
 git clone https://github.com/powerline/fonts.git ~/fonts
