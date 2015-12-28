@@ -16,7 +16,7 @@ ssh-keygen -f ~/.ssh/id_rsa -N ''
 sudo apt-get install zsh git curl apt-transport-https -y
 
 # gitconfig
-git clone http://is.gd/LAKCQ0 ~/gitconfig
+git clone https://github.com/fellipecastro/gitconfig.git ~/gitconfig
 ln -s ~/gitconfig/.gitconfig ~/.gitconfig
 
 git clone https://github.com/powerline/fonts.git ~/fonts
@@ -71,7 +71,7 @@ echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
 
 # Ubuntu Updater
-git clone http://is.gd/r3upLj ~/ubuntu-updater
+git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 source ~/updater.sh
 
