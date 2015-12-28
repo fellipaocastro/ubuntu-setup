@@ -41,12 +41,6 @@ sudo add-apt-repository ppa:webupd8team/java -y
 
 sudo aptitude update -y
 
-sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
-    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
-    golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
-    p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
-    pgadmin3 htop sqlite3 libsqlite3-dev -y
-
 echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
     sudo /usr/bin/debconf-set-selections
 echo 'mysql-server mysql-server/root_password password root' | \
@@ -54,8 +48,12 @@ echo 'mysql-server mysql-server/root_password password root' | \
 echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
 
-sudo aptitude install oracle-java9-installer oracle-java9-set-default mysql-server \
-    libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data -y
+sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
+    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
+    golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
+    p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
+    pgadmin3 htop sqlite3 libsqlite3-dev oracle-java9-installer oracle-java9-set-default \
+    mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
