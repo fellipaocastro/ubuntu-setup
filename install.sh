@@ -72,6 +72,7 @@ git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 source ~/updater.sh
 
+# Vim IDE
 wget -O - http://is.gd/H4WYUh | bash
 
 mkdir ~/Workspace
