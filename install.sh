@@ -74,4 +74,6 @@ source ~/updater.sh
 
 wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | bash
 
+mkdir ~/Workspace
+
 sudo reboot
