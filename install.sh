@@ -73,6 +73,5 @@ ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 source ~/updater.sh
 
 wget -O - https://raw.githubusercontent.com/fellipecastro/vim-ide/master/install.sh | bash
-touch ~/.vimrc_extra
 
 sudo reboot
