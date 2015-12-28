@@ -40,6 +40,8 @@ echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> \
 
 sudo add-apt-repository ppa:webupd8team/java -y
 
+sudo apt-get update -y
+sudo apt-get install aptitude -y
 sudo aptitude update -y
 
 echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
@@ -63,8 +65,11 @@ rvm install 2.2.4
 rvm --default use current
 gem install rubocop
 
-sudo pip2 install --upgrade pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-sudo pip3 install --upgrade pip setuptools flake8 ipdb httpie argparse --upgrade
+sudo pip2 install --upgrade pip setuptools
+sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+
+sudo pip3 install --upgrade pip setuptools
+sudo pip3 install flake8 ipdb httpie argparse --upgrade
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
