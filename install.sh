@@ -15,7 +15,9 @@ ssh-keygen -f ~/.ssh/id_rsa -N ''
 
 sudo apt-get install zsh git curl apt-transport-https -y
 
-wget -O - https://raw.githubusercontent.com/fellipecastro/.gitconfig/master/.gitconfig > .gitconfig
+# gitconfig
+git clone http://is.gd/LAKCQ0 ~/gitconfig
+ln -s ~/gitconfig/.gitconfig ~/.gitconfig
 
 git clone https://github.com/powerline/fonts.git ~/fonts
 source ~/fonts/install.sh
@@ -68,7 +70,8 @@ sudo pip3 install --upgrade pip setuptools flake8 ipdb httpie argparse --upgrade
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
 
-git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
+# Ubuntu Updater
+git clone http://is.gd/r3upLj ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 source ~/updater.sh
 
