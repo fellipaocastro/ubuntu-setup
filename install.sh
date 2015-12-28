@@ -21,6 +21,9 @@ wget -NP /tmp https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 sed -i.bak '/env zsh/d' /tmp/install.sh
 source /tmp/install.sh
 
+git clone https://github.com/powerline/fonts.git ~/fonts
+source ~/fonts/install.sh
+
 git clone https://github.com/zenorocha/dracula-theme/ ~/dracula-theme
 ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 sed -i.bak 's~\(ZSH_THEME="\)[^"]*\(".*\)~\1dracula\2~' ~/.zshrc
@@ -60,14 +63,11 @@ rvm install 2.2.4
 rvm --default use current
 gem install rubocop
 
-sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
-sudo pip3 install flake8 ipdb httpie argparse
+sudo pip2 install pip virtualenv virtualenvwrapper flake8 ipdb httpie argparse --upgrade
+sudo pip3 install pip flake8 ipdb httpie argparse --upgrade
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
-
-git clone https://github.com/powerline/fonts.git ~/fonts
-source ~/fonts/install.sh
 
 git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
 ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
