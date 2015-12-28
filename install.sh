@@ -62,8 +62,8 @@ rvm install 2.2.4
 rvm --default use current
 gem install rubocop
 
-sudo pip2 install pip virtualenv virtualenvwrapper flake8 ipdb httpie argparse --upgrade
-sudo pip3 install pip flake8 ipdb httpie argparse --upgrade
+sudo pip2 install --upgrade pip setuptools virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+sudo pip3 install --upgrade pip setuptools flake8 ipdb httpie argparse --upgrade
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
