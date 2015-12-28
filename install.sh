@@ -55,7 +55,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
     golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
     p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
     pgadmin3 htop sqlite3 libsqlite3-dev oracle-java9-installer oracle-java9-set-default \
-    mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data -y
+    mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data ruby -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
