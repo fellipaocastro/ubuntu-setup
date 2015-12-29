@@ -54,9 +54,9 @@ echo 'mysql-server mysql-server/root_password_again password root' | \
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
     ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
     golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
-    p7zip-full p7zip-rar lzma lzma-dev tmux vim indicator-keylock rabbitmq-server filezilla \
-    pgadmin3 htop sqlite3 libsqlite3-dev oracle-java9-installer oracle-java9-set-default \
-    mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data ruby -y
+    p7zip-full p7zip-rar lzma lzma-dev tmux vim vim-nox indicator-keylock rabbitmq-server \
+    ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java9-installer oracle-java9-set-default \
+    mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla -y
 
 gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable
