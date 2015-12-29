@@ -71,6 +71,9 @@ sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 sudo pip3 install --upgrade pip setuptools
 sudo pip3 install flake8 ipdb httpie argparse --upgrade
 
+mkdir ~/.config
+echo -e '[flake8]\nmax-line-length = 99\nmax-complexity = 10' >> ~/.config/flake8
+
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
 
