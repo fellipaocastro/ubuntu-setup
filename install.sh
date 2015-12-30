@@ -77,13 +77,13 @@ echo -e '[flake8]\nmax-line-length = 99\nmax-complexity = 10' >> ~/.config/flake
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
 
-git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
-ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
-source ~/updater.sh
-
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
 
 mkdir ~/Workspace
+
+git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
+ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
+source ~/updater.sh
 
 sudo reboot
