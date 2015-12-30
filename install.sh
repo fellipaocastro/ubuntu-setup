@@ -15,8 +15,8 @@ ssh-keygen -f ~/.ssh/id_rsa -N ''
 
 sudo apt-get install zsh git curl apt-transport-https -y
 
-git clone https://github.com/fellipecastro/gitconfig.git ~/gitconfig
-ln -s ~/gitconfig/.gitconfig ~/.gitconfig
+# gitconfig
+wget -NP /tmp http://is.gd/axtIJe && source /tmp/axtIJe
 
 git clone https://github.com/powerline/fonts.git ~/fonts
 source ~/fonts/install.sh
@@ -82,8 +82,8 @@ wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
 
 mkdir ~/Workspace
 
-git clone https://github.com/fellipecastro/ubuntu-updater.git ~/ubuntu-updater
-ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
+# Ubuntu Updater
+wget -NP /tmp http://is.gd/qVPryF && source /tmp/qVPryF
 source ~/updater.sh
 
 sudo reboot
