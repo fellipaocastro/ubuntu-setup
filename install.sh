@@ -82,7 +82,7 @@ ln -s ~/ubuntu-updater/updater.sh ~/updater.sh
 source ~/updater.sh
 
 # Vim IDE
-wget -O - http://is.gd/H4WYUh | bash
+wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
 
 mkdir ~/Workspace
 
