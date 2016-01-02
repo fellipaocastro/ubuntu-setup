@@ -15,7 +15,7 @@ sudo echo 'America/Sao_Paulo' > /etc/timezone
 
 ssh-keygen -f ~/.ssh/id_rsa -N ''
 
-sudo apt-get install zsh git curl apt-transport-https -y
+sudo apt-get install zsh git wget curl apt-transport-https -y
 
 # dotfiles
 wget -NP /tmp http://is.gd/axtIJe && source /tmp/axtIJe
