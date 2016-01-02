@@ -15,7 +15,7 @@ ssh-keygen -f ~/.ssh/id_rsa -N ''
 
 sudo apt-get install zsh git curl apt-transport-https -y
 
-# gitconfig
+# dotfiles
 wget -NP /tmp http://is.gd/axtIJe && source /tmp/axtIJe
 
 git clone https://github.com/powerline/fonts.git ~/fonts
