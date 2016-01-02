@@ -31,11 +31,11 @@ ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-them
 sed -i.bak 's~\(ZSH_THEME="\)[^"]*\(".*\)~\1dracula\2~' ~/.zshrc
 
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-sudo echo "deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse" | \
+sudo echo 'deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse' | \
     sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
 
 curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
-echo "deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1" >> \
+echo 'deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1' >> \
     /etc/apt/sources.list.d/varnish-cache.list
 
 sudo add-apt-repository ppa:webupd8team/java -y
@@ -72,13 +72,13 @@ sudo pip3 install --upgrade pip setuptools
 sudo pip3 install flake8 ipdb httpie argparse --upgrade
 
 mkdir ~/.config
-echo -e '[flake8]\nmax-line-length = 99\nmax-complexity = 10' >> ~/.config/flake8
+echo -e "[flake8]\nmax-line-length = 99\nmax-complexity = 10" >> ~/.config/flake8
 
-echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
+echo -e "\nsource /usr/local/bin/virtualenvwrapper.sh" >> ~/.zshrc
 
-echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
-echo -e "alias g='git'" >> ~/.zshrc
-echo -e "alias fr='git fetch && git rebase'" >> ~/.zshrc
+echo -e "\nif [ -f ~/.zsh_aliases ]; then" >> ~/.zshrc
+echo -e "    . ~/.zsh_aliases" >> ~/.zshrc
+echo -e 'fi' >> ~/.zshrc
 
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
