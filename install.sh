@@ -9,6 +9,8 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
+mkdir ~/Workspace
+
 sudo echo 'America/Sao_Paulo' > /etc/timezone
 
 ssh-keygen -f ~/.ssh/id_rsa -N ''
@@ -79,8 +81,6 @@ echo -e 'fi' >> ~/.zshrc
 
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
-
-mkdir ~/Workspace
 
 # Ubuntu Updater
 wget -NP /tmp http://is.gd/qVPryF && source /tmp/qVPryF
