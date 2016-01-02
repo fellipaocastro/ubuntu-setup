@@ -10,6 +10,7 @@ sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
 mkdir ~/Workspace
+ln -s ~/Workspace ~/w
 
 sudo echo 'America/Sao_Paulo' > /etc/timezone
 
