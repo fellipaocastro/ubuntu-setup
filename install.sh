@@ -76,6 +76,8 @@ echo -e '[flake8]\nmax-line-length = 99\nmax-complexity = 10' >> ~/.config/flake
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 echo -e "\nalias ll='ls -lGa'" >> ~/.zshrc
+echo -e "alias g='git'" >> ~/.zshrc
+echo -e "alias fr='git fetch && git rebase'" >> ~/.zshrc
 
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
