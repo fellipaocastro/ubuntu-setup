@@ -9,24 +9,12 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
-echo -ne "\nName: " && read name
-echo -ne "\nEmail: " && read email
-echo ''
-
 mkdir ~/Workspace
 ln -s ~/Workspace ~/w
 
 sudo echo 'America/Sao_Paulo' > /etc/timezone
 
 sudo apt-get install zsh git wget curl apt-transport-https -y
-
-echo -e "\nexport NAME=\"$name\"" >> ~/.zshrc
-echo -e "\nexport EMAIL=\"$email\"" >> ~/.zshrc
-
-git config --global user.name "$name"
-git config --global user.email "$email"
-
-ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -N ''
 
 # dotfiles
 wget -NP /tmp http://is.gd/ENw5aL && source /tmp/ENw5aL
@@ -38,6 +26,18 @@ wget -NP /tmp https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 sed -i.bak '/env zsh/d' /tmp/install.sh
 source /tmp/install.sh
 sed -i.bak 's/export\ PATH="/export\ PATH="$PATH:/' ~/.zshrc
+
+echo -ne "\nName: " && read name
+echo -ne "\nEmail: " && read email
+echo ''
+
+echo -e "\nexport NAME=\"$name\"" >> ~/.zshrc
+echo -e "\nexport EMAIL=\"$email\"" >> ~/.zshrc
+
+git config --global user.name "$name"
+git config --global user.email "$email"
+
+ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -N ''
 
 git clone https://github.com/zenorocha/dracula-theme/ ~/dracula-theme
 ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
