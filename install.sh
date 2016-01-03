@@ -1,4 +1,8 @@
 #!/bin/bash
+echo -ne "\nName: " && read name
+echo -ne "\nEmail: " && read email
+echo ''
+
 sudo ufw allow ssh
 sudo ufw allow www
 sudo yes 'yes' | ufw enable
@@ -26,10 +30,6 @@ wget -NP /tmp https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install
 sed -i.bak '/env zsh/d' /tmp/install.sh
 source /tmp/install.sh
 sed -i.bak 's/export\ PATH="/export\ PATH="$PATH:/' ~/.zshrc
-
-echo -ne "\nName: " && read name
-echo -ne "\nEmail: " && read email
-echo ''
 
 echo -e "\nexport NAME=\"$name\"" >> ~/.zshrc
 echo -e "\nexport EMAIL=\"$email\"" >> ~/.zshrc
