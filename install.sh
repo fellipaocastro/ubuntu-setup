@@ -23,9 +23,10 @@ sudo apt-get install zsh git wget curl apt-transport-https -y
 echo -e "\nexport NAME=\"$name\"" >> ~/.zshrc
 echo -e "\nexport EMAIL=\"$email\"" >> ~/.zshrc
 
-source ~/.zshrc
+git config --global user.name "$name"
+git config --global user.email "$email"
 
-ssh-keygen -t rsa -b 4096 -C "$EMAIL" -f ~/.ssh/id_rsa -N ''
+ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -N ''
 
 # dotfiles
 wget -NP /tmp http://is.gd/ENw5aL && source /tmp/ENw5aL
