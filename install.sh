@@ -11,7 +11,6 @@ sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
 echo -ne "\nName: " && read name
 echo -ne "\nEmail: " && read email
-echo -e "\n"
 
 mkdir ~/Workspace
 ln -s ~/Workspace ~/w
