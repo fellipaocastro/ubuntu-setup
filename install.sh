@@ -17,14 +17,14 @@ ln -s ~/Workspace ~/w
 
 sudo echo 'America/Sao_Paulo' > /etc/timezone
 
-ssh-keygen -f ~/.ssh/id_rsa -N ''
-
 sudo apt-get install zsh git wget curl apt-transport-https -y
 
 echo -e "\nexport NAME=\"$name\"" >> ~/.zshrc
 echo -e "\nexport EMAIL=\"$email\"" >> ~/.zshrc
 
 source ~/.zshrc
+
+ssh-keygen -t rsa -b 4096 -C "$EMAIL" -f ~/.ssh/id_rsa -N ''
 
 # dotfiles
 wget -NP /tmp http://is.gd/ENw5aL && source /tmp/ENw5aL
