@@ -32,7 +32,7 @@ source /tmp/install.sh
 sed -i.bak 's/export\ PATH="/export\ PATH="$PATH:/' ~/.zshrc
 
 echo -e "\nexport NAME=\"$name\"" >> ~/.zshrc
-echo -e "\nexport EMAIL=\"$email\"" >> ~/.zshrc
+echo -e "export EMAIL=\"$email\"" >> ~/.zshrc
 
 git config --global user.name "$name"
 git config --global user.email "$email"
