@@ -9,9 +9,9 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
-echo -n "\nName: " && read name
-echo -n "\nEmail: " && read email
-echo -n "\n"
+echo -ne "\nName: " && read name
+echo -ne "\nEmail: " && read email
+echo -e "\n"
 
 mkdir ~/Workspace
 ln -s ~/Workspace ~/w
