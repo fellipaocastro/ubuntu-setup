@@ -9,6 +9,9 @@ sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
 
+echo -n "Name: " && read name
+echo -n "Email: " && read email
+
 mkdir ~/Workspace
 ln -s ~/Workspace ~/w
 
@@ -77,6 +80,9 @@ sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 
 sudo pip3 install --upgrade pip setuptools
 sudo pip3 install flake8 ipdb httpie argparse --upgrade
+
+echo -e "\nexport NAME=$name" >> ~/.zshrc
+echo -e "\nexport EMAIL=$email" >> ~/.zshrc
 
 echo -e "\nsource /usr/local/bin/virtualenvwrapper.sh" >> ~/.zshrc
 
