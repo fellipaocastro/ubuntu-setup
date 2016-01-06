@@ -1,6 +1,6 @@
 #!/bin/bash
-echo -ne "\nName: " && read name
-echo -ne "\nEmail: " && read email
+echo -ne '\nName: ' && read name
+echo -ne '\nEmail: ' && read email
 echo ''
 
 sudo ufw allow ssh
@@ -88,14 +88,14 @@ sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse th
 sudo pip3 install -U pip setuptools
 sudo pip3 install -U flake8 ipdb argparse
 
-echo -e "\nsource /usr/local/bin/virtualenvwrapper.sh" >> ~/.zshrc
+echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 
-echo -e "\nif [ -f ~/.zsh_aliases ]; then" >> ~/.zshrc
-echo -e "    . ~/.zsh_aliases" >> ~/.zshrc
+echo -e '\nif [ -f ~/.zsh_aliases ]; then' >> ~/.zshrc
+echo -e '    . ~/.zsh_aliases' >> ~/.zshrc
 echo -e 'fi' >> ~/.zshrc
 
-echo -e "\nif [ -f ~/.zsh_functions ]; then" >> ~/.zshrc
-echo -e "    . ~/.zsh_functions" >> ~/.zshrc
+echo -e '\nif [ -f ~/.zsh_functions ]; then' >> ~/.zshrc
+echo -e '    . ~/.zsh_functions' >> ~/.zshrc
 echo -e 'fi' >> ~/.zshrc
 
 echo -e '\neval $(thefuck --alias)' >> ~/.zshrc
