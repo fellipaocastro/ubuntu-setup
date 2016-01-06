@@ -82,11 +82,11 @@ rvm install 2.2.4
 rvm --default use current
 gem install rubocop
 
-sudo pip2 install --upgrade pip setuptools
-sudo pip2 install virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+sudo pip2 install -U pip setuptools
+sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 
-sudo pip3 install --upgrade pip setuptools
-sudo pip3 install flake8 ipdb httpie argparse --upgrade
+sudo pip3 install -U pip setuptools
+sudo pip3 install -U flake8 ipdb httpie argparse
 
 echo -e "\nsource /usr/local/bin/virtualenvwrapper.sh" >> ~/.zshrc
 
