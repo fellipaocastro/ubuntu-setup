@@ -83,10 +83,10 @@ rvm --default use current
 gem install rubocop
 
 sudo pip2 install -U pip setuptools
-sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse
+sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
 
 sudo pip3 install -U pip setuptools
-sudo pip3 install -U flake8 ipdb httpie argparse
+sudo pip3 install -U flake8 ipdb argparse
 
 echo -e "\nsource /usr/local/bin/virtualenvwrapper.sh" >> ~/.zshrc
 
@@ -97,6 +97,8 @@ echo -e 'fi' >> ~/.zshrc
 echo -e "\nif [ -f ~/.zsh_functions ]; then" >> ~/.zshrc
 echo -e "    . ~/.zsh_functions" >> ~/.zshrc
 echo -e 'fi' >> ~/.zshrc
+
+echo -e "\neval $(thefuck --alias)" >> ~/.zshrc
 
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
