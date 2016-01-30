@@ -43,6 +43,9 @@ git clone https://github.com/zenorocha/dracula-theme/ ~/dracula-theme
 ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 sed -i.bak 's~\(ZSH_THEME="\)[^"]*\(".*\)~\1dracula\2~' ~/.zshrc
 
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
+echo -e '\nsource ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
+
 sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
 sudo echo 'deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse' | \
     sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
@@ -106,5 +109,7 @@ wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
 # Updater
 wget -NP /tmp http://is.gd/yDgV6m && source /tmp/yDgV6m
 source ~/updater.sh
+
+source ~/.zshrc
 
 sudo reboot
