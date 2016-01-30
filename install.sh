@@ -103,8 +103,8 @@ echo -e '\neval $(thefuck --alias)' >> ~/.zshrc
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
 
-# Ubuntu Updater
-wget -NP /tmp http://is.gd/qVPryF && source /tmp/qVPryF
+# Updater
+wget -NP /tmp http://is.gd/yDgV6m && source /tmp/yDgV6m
 source ~/updater.sh
 
 sudo reboot
