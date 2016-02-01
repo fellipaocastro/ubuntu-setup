@@ -71,19 +71,12 @@ echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
-    ipython ipython3 tree exuberant-ctags supervisor nginx postgresql postgresql-contrib golang \
+    python-pip python3-pip ipython ipython3 tree exuberant-ctags supervisor nginx postgresql \
     golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
     p7zip-full p7zip-rar lzma lzma-dev tmux vim vim-nox indicator-keylock rabbitmq-server \
     ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java9-installer oracle-java9-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
-    firefox google-chrome-stable python-pip python3-pip -y
-
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable
-source /usr/local/rvm/scripts/rvm
-rvm install 2.2.4
-rvm --default use current
-gem install rubocop
+    firefox google-chrome-stable postgresql-contrib golang -y
 
 sudo pip2 install -U pip setuptools
 sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
@@ -92,6 +85,13 @@ sudo pip3 install -U pip setuptools
 sudo pip3 install -U flake8 ipdb argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
+
+gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
+curl -sSL https://get.rvm.io | bash -s stable
+source /usr/local/rvm/scripts/rvm
+rvm install 2.2.4
+rvm --default use current
+gem install rubocop
 
 echo -e '\nif [ -f ~/.zsh_aliases ]; then' >> ~/.zshrc
 echo -e '    . ~/.zsh_aliases' >> ~/.zshrc
