@@ -63,7 +63,7 @@ sudo apt-get update -y
 sudo apt-get install aptitude -y
 sudo aptitude update -y
 
-echo 'oracle-java9-installer shared/accepted-oracle-license-v1-1 select true' | \
+echo 'oracle-java8-installer shared/accepted-oracle-license-v1-1 select true' | \
     sudo /usr/bin/debconf-set-selections
 echo 'mysql-server mysql-server/root_password password root' | \
     sudo /usr/bin/debconf-set-selections
@@ -74,7 +74,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
     python-pip python3-pip ipython ipython3 tree exuberant-ctags supervisor nginx postgresql \
     golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
     p7zip-full p7zip-rar lzma lzma-dev tmux vim vim-nox indicator-keylock rabbitmq-server \
-    ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java9-installer oracle-java9-set-default \
+    ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java8-installer oracle-java8-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
     firefox google-chrome-stable postgresql-contrib golang -y
 
