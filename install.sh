@@ -79,7 +79,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
     firefox google-chrome-stable postgresql-contrib golang -y
 
 sudo pip2 install -U pip setuptools
-sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse thefuck
+sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse
 
 sudo pip3 install -U pip setuptools
 sudo pip3 install -U flake8 ipdb argparse
