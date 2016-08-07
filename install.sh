@@ -8,7 +8,7 @@ sudo ufw allow www
 sudo yes 'yes' | ufw enable
 
 sudo fallocate -l 1G /swapfile
-sudo chmod 600 /swapfile
+sudo chmod 600 /swapfiledr
 sudo mkswap /swapfile
 sudo swapon /swapfile
 sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
@@ -39,8 +39,8 @@ git config --global user.email "$email"
 
 ssh-keygen -t rsa -b 4096 -C "$email" -f ~/.ssh/id_rsa -N ''
 
-git clone https://github.com/zenorocha/dracula-theme/ ~/dracula-theme
-ln -s ~/dracula-theme/zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
+git clone https://github.com/dracula/zsh.git ~/dracula_zsh
+ln -s ~/dracula_zsh/dracula.zsh-theme ~/.oh-my-zsh/themes/dracula.zsh-theme
 sed -i.bak 's~\(ZSH_THEME="\)[^"]*\(".*\)~\1dracula\2~' ~/.zshrc
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
@@ -86,10 +86,9 @@ sudo pip3 install -U flake8 ipdb argparse
 
 echo -e '\nsource /usr/local/bin/virtualenvwrapper.sh' >> ~/.zshrc
 
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-curl -sSL https://get.rvm.io | bash -s stable --ruby
+\curl -sSL https://get.rvm.io | bash -s stable --ruby
 source /usr/local/rvm/scripts/rvm
-rvm --default use current
+rvm use current --default
 gem install rubocop
 
 echo -e '\nif [ -f ~/.zsh_aliases ]; then' >> ~/.zshrc
