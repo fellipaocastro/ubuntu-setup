@@ -99,6 +99,10 @@ echo -e '\nif [ -f ~/.zsh_functions ]; then' >> ~/.zshrc
 echo -e '    . ~/.zsh_functions' >> ~/.zshrc
 echo -e 'fi' >> ~/.zshrc
 
+echo -e '\nif [ -f ~/.zsh_work ]; then' >> ~/.zshrc
+echo -e '    . ~/.zsh_work' >> ~/.zshrc
+echo -e 'fi' >> ~/.zshrc
+
 # Vim IDE
 wget -NP /tmp http://is.gd/H4WYUh && source /tmp/H4WYUh
 
