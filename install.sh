@@ -85,8 +85,8 @@ sudo pip3 install -U pip setuptools
 sudo pip3 install -U flake8 ipdb argparse
 
 echo -e '\nexport WORKON_HOME=$HOME/.virtualenvs' >> ~/.zshrc
-echo -e '\nexport PROJECT_HOME=$HOME/Workspace' >> ~/.zshrc
-echo -e '\nsource /usr/local/bin/virtualenvwrapper_lazy.sh' >> ~/.zshrc
+echo -e 'export PROJECT_HOME=$HOME/Workspace' >> ~/.zshrc
+echo -e 'source /usr/local/bin/virtualenvwrapper_lazy.sh' >> ~/.zshrc
 
 \curl -sSL https://get.rvm.io | bash -s stable --ruby
 source /usr/local/rvm/scripts/rvm
