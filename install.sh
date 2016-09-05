@@ -76,7 +76,7 @@ sudo aptitude install build-essential python-dev python3-dev python-setuptools p
     p7zip-full p7zip-rar lzma lzma-dev tmux vim vim-nox indicator-keylock rabbitmq-server \
     ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java8-installer oracle-java8-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
-    firefox google-chrome-stable postgresql-contrib golang ruby-dev -y
+    firefox google-chrome-stable postgresql-contrib golang ruby-dev libpq-dev -y
 
 sudo pip2 install -U pip setuptools
 sudo pip2 install -U virtualenv virtualenvwrapper flake8 ipdb httpie argparse
