@@ -3,22 +3,12 @@ echo -ne '\nName: ' && read name
 echo -ne '\nEmail: ' && read email
 echo ''
 
-sudo ufw allow ssh
-sudo ufw allow www
-sudo yes 'yes' | ufw enable
-
-sudo fallocate -l 1G /swapfile
-sudo chmod 600 /swapfile
-sudo mkswap /swapfile
-sudo swapon /swapfile
-sudo sh -c 'echo "/swapfile none swap sw 0 0" >> /etc/fstab'
-
 mkdir ~/Workspace
 ln -s ~/Workspace ~/w
 
 sudo echo 'America/Sao_Paulo' > /etc/timezone
 
-sudo apt-get install zsh git wget curl apt-transport-https -y
+sudo apt-get install zsh git wget curl apt-transport-https tmux -y
 
 # dotfiles
 wget -NP /tmp http://is.gd/ENw5aL && source /tmp/ENw5aL
@@ -73,7 +63,7 @@ echo 'mysql-server mysql-server/root_password_again password root' | \
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
     python-pip python3-pip ipython ipython3 tree exuberant-ctags supervisor nginx postgresql \
     golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
-    p7zip-full p7zip-rar lzma lzma-dev tmux vim vim-nox indicator-keylock rabbitmq-server \
+    p7zip-full p7zip-rar lzma lzma-dev vim vim-nox indicator-keylock rabbitmq-server \
     ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java8-installer oracle-java8-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
     firefox google-chrome-stable postgresql-contrib golang ruby-dev libpq-dev neofetch -y
