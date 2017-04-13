@@ -40,14 +40,6 @@ sed -i.bak 's~\(ZSH_THEME="\)[^"]*\(".*\)~\1dracula\2~' ~/.zshrc
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
 echo -e '\nsource ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh' >> ~/.zshrc
 
-sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv 7F0CEB10
-sudo echo 'deb http://repo.mongodb.org/apt/ubuntu trusty/mongodb-org/3.0 multiverse' | \
-    sudo tee /etc/apt/sources.list.d/mongodb-org-3.0.list
-
-curl https://repo.varnish-cache.org/GPG-key.txt | sudo apt-key add -
-sudo echo 'deb https://repo.varnish-cache.org/ubuntu/ trusty varnish-4.1' >> \
-    /etc/apt/sources.list.d/varnish-cache.list
-
 wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | sudo apt-key add -
 sudo echo -e "\ndeb http://dl.google.com/linux/deb/ stable main" >> /etc/apt/sources.list
 
@@ -65,8 +57,8 @@ echo 'mysql-server mysql-server/root_password_again password root' | \
     sudo /usr/bin/debconf-set-selections
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
-    python-pip python3-pip ipython ipython3 tree exuberant-ctags supervisor nginx postgresql \
-    golang-go.tools redis-server mongodb-org tig python-pip python3-pip ntp varnish p7zip \
+    python-pip python3-pip ipython ipython3 tree exuberant-ctags nginx postgresql \
+    golang-go.tools redis-server tig python-pip python3-pip ntp p7zip \
     p7zip-full p7zip-rar lzma lzma-dev vim vim-nox indicator-keylock rabbitmq-server \
     ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java8-installer oracle-java8-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
@@ -109,5 +101,3 @@ wget -NP /tmp http://is.gd/yDgV6m && source /tmp/yDgV6m
 source ~/updater.sh
 
 source ~/.zshrc
-
-sudo reboot
