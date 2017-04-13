@@ -10,6 +10,10 @@ sudo echo 'America/Sao_Paulo' > /etc/timezone
 
 sudo apt-get install zsh git wget curl apt-transport-https tmux -y
 
+zsh
+chsh -s $(which zsh)
+sudo chsh -s $(which zsh)
+
 # dotfiles
 wget -NP /tmp http://is.gd/ENw5aL && source /tmp/ENw5aL
 
