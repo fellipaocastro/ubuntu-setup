@@ -45,6 +45,9 @@ sudo echo -e "\ndeb http://dl.google.com/linux/deb/ stable main" >> /etc/apt/sou
 
 sudo add-apt-repository ppa:webupd8team/java -y
 
+sudo apt-key adv --keyserver hkp://keyserver.ubuntu.com:80 --recv-keys BBEBDCB318AD50EC6865090613B00F1FD2C19886
+echo deb http://repository.spotify.com stable non-free | sudo tee /etc/apt/sources.list.d/spotify.list
+
 sudo apt-get update -y
 sudo apt-get install aptitude -y
 sudo aptitude update -y
@@ -58,7 +61,7 @@ echo 'mysql-server mysql-server/root_password_again password root' | \
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
     python-pip python3-pip ipython ipython3 tree exuberant-ctags nginx postgresql \
-    golang-go.tools redis-server tig python-pip python3-pip ntp p7zip xclip \
+    golang-go.tools redis-server tig python-pip python3-pip ntp p7zip xclip spotify-client \
     p7zip-full p7zip-rar lzma lzma-dev vim vim-nox indicator-keylock rabbitmq-server \
     ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java8-installer oracle-java8-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
