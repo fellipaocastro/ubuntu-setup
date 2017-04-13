@@ -58,7 +58,7 @@ echo 'mysql-server mysql-server/root_password_again password root' | \
 
 sudo aptitude install build-essential python-dev python3-dev python-setuptools python3-setuptools \
     python-pip python3-pip ipython ipython3 tree exuberant-ctags nginx postgresql \
-    golang-go.tools redis-server tig python-pip python3-pip ntp p7zip \
+    golang-go.tools redis-server tig python-pip python3-pip ntp p7zip xclip \
     p7zip-full p7zip-rar lzma lzma-dev vim vim-nox indicator-keylock rabbitmq-server \
     ruby pgadmin3 htop sqlite3 libsqlite3-dev oracle-java8-installer oracle-java8-set-default \
     mysql-server libmysqlclient-dev mysql-client mysql-workbench mysql-workbench-data filezilla \
