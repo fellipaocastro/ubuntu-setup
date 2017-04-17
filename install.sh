@@ -84,6 +84,8 @@ source /usr/local/rvm/scripts/rvm
 rvm use current --default
 gem install rubocop
 
+echo -e '\nsource $HOME/.rvm/scripts/rvm' >> ~/.zshrc
+
 echo -e '\nif [ -f ~/.zsh_aliases ]; then' >> ~/.zshrc
 echo -e '    . ~/.zsh_aliases' >> ~/.zshrc
 echo -e 'fi' >> ~/.zshrc
